@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Leva em consideraçao a margin e o padding quando vai ocupar a tela toda */
+    font-family: 'Open Sans', sans-serif;
+}  /*Esse é um seletor universal feito para zerar margin e padding, evitando que definicoes padrao do navegador para esses itens, distorçam o layout*/
+
+nav{
+    margin: 10px;
+}
+
+section#links_uteis{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+/* O espaço depois de links uteis é um seletor de hierarquia (qualquer elemento ul que tiver um filho que é li e que for descendente em qualquer nivel de links uteis, ativa a regra */
+section#links_uteis ul>li {
+    display: inline;
+}
+
+section#links_uteis ul>li::before {
+    content: "| ";
+
+}
+
+article#area_do_aluno{
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+    color: red;
+    align-items: center;
+}
+
+article#area_do_aluno>i{
+    margin-right: 5px;
+}
+
+button.botao_vazado{
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 2px;
+    padding: 10px;
+    color: red;
+    font-size: 18px;
+    outline: 0; /* Tira aquela borda que aparece quando tu coloca o mouse em cima */
+}
+
+button.botao_preenchido{
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    font-size: 18px;
+    padding: 10px;
+    outline: 0;
+    border-radius: 2px;
+}
+
+section#menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main>img{
+    width: 100%;
+    max-width: 1920px;
+ /* A imagem vai ocupar 100% do tamanho da tela */
+}
+
+main>section{
+    display: flex;
+    justify-content: center;
+}
+
+.caixa{
+    width: 80vw;
+    border: 3px solid red;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 25px 0;
+}
+
+.caixa>h2{
+    text-align: center;
+}
+
+.fundo-vermelho{
+    background-color: red;
+}
+
+.caixa-full>h2{
+    text-align: center;
+    color: white;
+}
+
+.caixa-full{
+    width: 100vw;
+    padding: 10px;
+    margin: 25px 0;
+}
+
+.caixa-full>blockquote{
+    border-left: 5px solid white;
+    padding-left: 5px;
+    width: 25vw;
+    margin: 0 auto;
+    color: white;
+}
+
+.caixa ul{
+    list-style-position: inside ; /*Coloca as bolinhas dos itens dentro da caixa */
+}
+
+footer{
+    text-align: center;
+}
